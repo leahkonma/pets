@@ -13,7 +13,10 @@ $f3 = Base::instance(); //static method
 
 //define a default route
 $f3->route('GET /', function (){
-    echo "Pet Home";
+//    echo "Pet Home";
+
+    $view = new Template();
+    echo $view->render('views/home.html');
 });
 
 //run Fat-Free
